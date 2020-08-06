@@ -1,4 +1,4 @@
-import { Request, Response, response } from "express";
+import { Request, Response } from "express";
 
 import db from "../database/connection";
 import convertHoursToMinutes from "../utils/convertHoursToMinutes";
@@ -77,7 +77,7 @@ export default class ClassesController {
           class_id,
           week_day: scheduleItem.week_day,
           from: convertHoursToMinutes(scheduleItem.from),
-          to: convertHoursToMinutes(scheduleItem.from),
+          to: convertHoursToMinutes(scheduleItem.to),
         };
       });
 
